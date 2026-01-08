@@ -1,0 +1,7 @@
+Tech Recruiter Bot - Demonstração
+Data: 2026-01-08 11:52:45
+Tech Recruiters encontrados no teste: 6
+Mensagem de conexão:
+Olá! Sou desenvolvedor de software em busca de novas oportunidades na área de tecnologia. 
+Estou aberto a vagas de desenvolvimento web, mobile e backend. 
+Seria um prazer me conectar e explorar possíveis oportunidades.

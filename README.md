@@ -1,115 +1,149 @@
+# 🎯 Bot Conexão Tech - LinkedIn
 
-# <img src="https://github.com/user-attachments/assets/9115aa71-ea52-4fb3-b629-b1a1b5833515" width="20" height="20"> TUI - LinkedIn Followers Bot <img src="https://github.com/user-attachments/assets/9115aa71-ea52-4fb3-b629-b1a1b5833515" width="20" height="20">
+> *"Conectando talentos com oportunidades, uma mensagem de cada vez"*
 
-![GitHub stars](https://img.shields.io/github/stars/capi-nemoo/LinkedIn-Bot-Followers?style=social) ![GitHub forks](https://img.shields.io/github/forks/capi-nemoo/LinkedIn-Bot-Followers?style=social) ![GitHub issues](https://img.shields.io/github/issues/capi-nemoo/LinkedIn-Bot-Followers)
+Um bot inteligente que identifica e se conecta com Tech Recruiters no LinkedIn, facilitando sua jornada de networking profissional.
 
-## 🚀 This fork now features full Linux support and a user-friendly Terminal User Interface (TUI) for easier configuration and execution! 🚀
+## 🌟 Sobre Este Projeto
 
-## Overview
+Este bot foi desenvolvido com um propósito simples mas poderoso: **ajudar profissionais de tecnologia a se conectarem com os melhores recrutadores do mercado**. Em vez de seguir aleatoriamente, nosso bot identifica perfis de Tech Recruiters e envia mensagens personalizadas demonstrando seu interesse em oportunidades.
 
+### � A Filosofia por Trás
 
-Welcome to the **LinkedIn  Bot Follower** project! This tool automates the process of following LinkedIn accounts, helping you grow your professional network with ease. The project includes a Terminal User Interface (TUI) that lets you configure key parameters before launching the appropriate bot script for your operating system.
+Acreditamos que networking não é sobre quantidade, mas sobre **qualidade de conexões**. Cada conexão deve ser significativa e trazer valor para ambos os lados. Por isso, nosso bot:
 
-![2025-02-1805-15-57-ezgif com-resize](https://github.com/user-attachments/assets/7775fdbc-f1ce-4b4c-9011-631319ceed71)
+- 🎯 **Foca em Tech Recruiters especificamente**
+- 💬 **Envia mensagens personalizadas e autênticas**
+- 🔒 **Respeita os limites do LinkedIn** (15 conexões/dia, 100/semana)
+- 🧠 **Usa inteligência para identificar os melhores perfis**
 
-This repository contains:
+## 🚀 Funcionalidades
 
-- **TUI Script (`TUI-bot_Launcher.py`)**: A user-friendly interface to select your OS and enter required configuration values.
-- **Bot Scripts**:
-  - `botlinkdinW.py` for Windows
-  - `botlinkdinL.py` for Linux
+### Modo Tech Recruiter
+- **Identificação Inteligente**: Detecta perfis de Tech Recruiters usando palavras-chave específicas
+- **Mensagens Personalizadas**: Envia mensagens autênticas sobre sua busca por oportunidades
+- **Filtros por Localização**: Conecte-se com recrutadores de sua região ou empresas desejadas
+- **Interface TUI Amigável**: Configure tudo facilmente através de uma interface no terminal
 
-## 🔑 Key Features
+### Características de Segurança
+- ✅ **Limites Diários**: Máximo de 15 conexões por dia
+- ✅ **Limites Semanais**: Máximo de 100 conexões por semana
+- ✅ **Detecção de Execução**: Evita execuções múltiplas no mesmo dia
+- ✅ **Logs Detalhados**: Acompanhe todas as ações realizadas
 
-- **Automated LinkedIn Following**: Follows up to 25 new accounts per run.
-- **Weekly Limit Check**: Prevents exceeding a weekly following limit to help avoid detection.
-- **Daily Execution Check**: Ensures the bot runs only once per day.
-- **Custom Configuration via TUI**: Set your Chrome executable path, profile path, and login status easily.
-- **Cross-Platform Compatibility**: Automatically selects the correct bot script based on your OS.
+## 🎨 Interface TUI
 
-## ⚙️ Requirements
+Nossa interface em terminal é colorida e intuitiva:
 
-- Python 3.6+
-- Chrome or Chromium Browser
-- A valid LinkedIn account
-- [NoDriver](https://github.com/ultrafunkamsterdam/nodriver) library
+```
+🎯 Tech Recruiter Bot - Localização & Empresas
+Configure filtros para encontrar os melhores Tech Recruiters
 
-Install the required library using:
+Localização: São Paulo, Brasil
+Empresas Desejadas: Google, Amazon, Microsoft, Meta, Apple
+Termos de Busca: tech recruiter, recrutador, talent acquisition
+Máx. Diárias: 15
+Máx. Semanais: 100
 
+Navegação: ↑↓ | Editar: ENTER | Salvar: F2 | Executar: F5 | Sair: ESC
+```
+
+## 🛠️ Instalação para MacOS
+
+### Método 1: Script Automático (Recomendado)
 ```bash
-pip install nodriver
+# Torne o script executável
+chmod +x install_mac.sh
+
+# Execute a instalação
+./install_mac.sh
 ```
 
-
-## 🛠 Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/capi-nemoo/LinkedIn-bot-Followers
-   cd LinkedIn-bot-Followers
-   ```
-
-2. Review and, if needed, modify the default paths in the bot scripts:
-
-   - For Windows: `botlinkdinW.py`
-   - For Linux: `botlinkdinL.py`
-
-3. Use the TUI script to configure your settings before running the bot.
-
-## 📜 Usage
-
-Launch the TUI script with:
-
+### Método 2: Instalação Manual
 ```bash
-python TUI-bot_Launcher.py
+# Instale o Python 3.6+ (se ainda não tiver)
+brew install python
+
+# Instale as dependências
+pip3 install selenium webdriver-manager
+
+# Instale o Google Chrome (se ainda não tiver)
+brew install --cask google-chrome
 ```
 
-The TUI will prompt you to:
+## 📋 Como Usar
 
-- **Select Your OS**: Choose between Windows and Linux.
-- **Enter Chrome Executable Path**: Provide the full path to your Chrome or Chromium executable.
-- **Enter Profile Path**: Specify the directory where your LinkedIn user data should be saved.
-- **Set Login State**: Input `1` if you are logged in, or `0` if not.
+### 1. Configure seu Ambiente
+```bash
+# Navegue até o diretório
+cd LinkedIn-Bot-Followers
 
-Based on your selections, the TUI will automatically launch the corresponding bot script with your provided configuration.
-
-### How the Bot Works
-
-1. **Pre-Execution Checks**:
-   - The bot reads `AccountLog.txt` to verify if it has already run today or if the weekly follow limit has been reached.
-2. **Browser Launch**:
-   - It launches Chrome/Chromium with your specified profile.
-3. **LinkedIn Interaction**:
-   - The bot navigates to your network page, scrolls to find accounts, and follows up to 25 new accounts.
-4. **Logging**:
-   - The action is logged in `AccountLog.txt` for tracking.
-
-## 🚧 Disclaimer
-
-Automation on LinkedIn can violate its Terms of Service and may lead to account restrictions. Use this bot responsibly and at your own risk. This project is intended for educational purposes only.
-
-## 📧 Contributing
-
-Contributions are welcome! If you have improvements, bug fixes, or new features, feel free to open an issue or submit a pull request.
-Specials Thanks to
-
-If you enjoy this project, please consider giving it a star ⭐! Every star helps spread the word and motivates me to keep improving the project. 
-
-A special thanks to [Connor9994](https://github.com/Connor9994/LinkedIn-Follower-Bot), the maintainer of the original project.
-
+# Execute a interface TUI
+python3 TUI-tech-recruiter-location.py
 ```
-Enjoy automating your network growth responsibly with the LinkedIn Follower Bot!
 
-```
-## Star History
+### 2. Configure seus Filtros
+- **Localização**: "São Paulo", "Remote", "Brasil", etc.
+- **Empresas Desejadas**: "Google, Amazon, Microsoft, Meta, Apple"
+- **Termos de Busca**: Já vem pré-configurado com termos de Tech Recruiters
 
-<a href="https://star-history.com/#Capi-nemoo/LinkedIn-Bot-Followers&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Capi-nemoo/LinkedIn-Bot-Followers&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Capi-nemoo/LinkedIn-Bot-Followers&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Capi-nemoo/LinkedIn-Bot-Followers&type=Date" />
- </picture>
-</a>
+### 3. Execute o Bot
+- Pressione **F5** para iniciar
+- Faça login no LinkedIn quando o Chrome abrir
+- O bot começará a identificar e conectar com Tech Recruiters
 
+## 🎯 Exemplos de Mensagens
 
+O bot envia mensagens como:
+> "Olá! Sou [seu nome], profissional de tecnologia com experiência em [sua área]. Estou explorando novas oportunidades e gostaria de me conectar para ficar por dentro de vagas interessantes na empresa. Obrigado!"
+
+## 🔧 Scripts Disponíveis
+
+- **`TUI-tech-recruiter-location.py`**: Interface principal com filtros de localização
+- **`TUI-tech-recruiter.py`**: Interface básica para Tech Recruiters
+- **`scripts/bot_tech_recruiters_selenium.py`**: Bot principal (MacOS/Linux)
+- **`install_mac.sh`**: Script de instalação para MacOS
+
+## 🌟 Diferenciais
+
+### Por que este bot é especial?
+- **Focado em Qualidade**: Não é sobre quantidade de conexões, mas sobre conexões certas
+- **Respeitoso**: Segue todos os limites do LinkedIn para manter sua conta segura
+- **Inteligente**: Identifica recrutadores reais, não perfis aleatórios
+- **Personalizável**: Adapte mensagens e filtros ao seu estilo
+
+### Para Quem é Este Bot?
+- 👨‍💻 **Desenvolvedores** buscando novas oportunidades
+- �‍💼 **Profissionais de Tech** querendo expandir seu network
+- 🎯 **Recém-formados** entrando no mercado de tecnologia
+- 🚀 **Profissionais em transição** de carreira
+
+## ⚠️ Importante
+
+Este bot foi criado com **responsabilidade e ética** em mente. Use-o de forma consciente:
+
+- ✅ **Seja autêntico** nas suas mensagens
+- ✅ **Respeite os limites** do LinkedIn
+- ✅ **Use com moderação** - qualidade sobre quantidade
+- ❌ **Não spame** recrutadores
+- ❌ **Não automessage** em excesso
+
+## 🤝 Contribuindo
+
+Adoramos contribuições! Se você tem ideias para melhorar o bot:
+
+1. Fork o projeto
+2. Crie uma branch para sua feature
+3. Commit suas mudanças
+4. Push para a branch
+5. Abra um Pull Request
+
+## 📧 Suporte
+
+Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/Capi-nemoo/LinkedIn-Bot-Followers/issues) ou entre em contato!
+
+---
+
+> *"O sucesso não é sobre quem você conhece, mas sobre quem conhece você pelo trabalho que você faz."*
+
+**Feito com ❤️ para a comunidade tech**

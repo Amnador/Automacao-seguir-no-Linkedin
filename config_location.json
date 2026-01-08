@@ -1,0 +1,17 @@
+{
+  "location": "São Paulo, Brasil",
+  "companies": [
+    "Google",
+    "Amazon",
+    "Microsoft",
+    "Meta",
+    "Apple"
+  ],
+  "search_terms": [
+    "tech recruiter",
+    "recrutador",
+    "talent acquisition"
+  ],
+  "max_daily_connections": 15,
+  "max_weekly_connections": 100
+}
