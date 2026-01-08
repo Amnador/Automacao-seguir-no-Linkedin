@@ -8,9 +8,9 @@ Um bot inteligente que identifica e se conecta com Tech Recruiters no LinkedIn, 
 
 Este bot foi desenvolvido com um propósito simples mas poderoso: **ajudar profissionais de tecnologia a se conectarem com os melhores recrutadores do mercado**. Em vez de seguir aleatoriamente, nosso bot identifica perfis de Tech Recruiters e envia mensagens personalizadas demonstrando seu interesse em oportunidades.
 
-### � A Filosofia por Trás
+###  A Filosofia por Trás
 
-Acreditamos que networking não é sobre quantidade, mas sobre **qualidade de conexões**. Cada conexão deve ser significativa e trazer valor para ambos os lados. Por isso, nosso bot:
+Acredito que networking não é sobre quantidade, mas sobre **qualidade de conexões**. Cada conexão deve ser significativa e trazer valor para ambos os lados. Por isso, nosso bot:
 
 - 🎯 **Foca em Tech Recruiters especificamente**
 - 💬 **Envia mensagens personalizadas e autênticas**
@@ -140,10 +140,10 @@ Adoramos contribuições! Se você tem ideias para melhorar o bot:
 
 ## 📧 Suporte
 
-Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/Capi-nemoo/LinkedIn-Bot-Followers/issues) ou entre em contato!
+Encontrou um bug ou tem uma sugestão? Entre em contato comigo!
 
 ---
 
 > *"O sucesso não é sobre quem você conhece, mas sobre quem conhece você pelo trabalho que você faz."*
 
-**Feito com ❤️ para a comunidade tech**
+**Feito para a comunidade tech**
